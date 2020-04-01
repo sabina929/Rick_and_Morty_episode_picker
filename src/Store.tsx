@@ -1,21 +1,31 @@
 import React from 'react'
+import {IAction, IState} from './interfaces'
 
+//  https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes
 
-interface IState {
-    episodes: [],
-    favorites: Array<''>
-}
 const initialState: IState = {
     episodes: [],
     favorites: []
 }
-export const Store = React.createContext<IState>(initialState)
+
+export const Store = React.createContext<IState | any>(initialState)
 
 
-function reducer() {
-    //pass
+function reducer(state:IState, action:IAction):IState {
+    switch(action.type) {
+        case 'FETCH_DATA':
+            return {...state, episodes: action.payload}
+        case 'ADD_FAV':
+            return {...state, favorites: [...state.favorites, action.payload]}  
+        case 'REMOVE_FAV':
+            return {...state, favorites: action.payload}
+        default: 
+            return state        
+    }
 }
 
 export function StoreProvider(props:any):JSX.Element {
-return <Store.Provider value={initialState}>{props.children}</Store.Provider>
+    const [state, dispatch] = React.useReducer(reducer, initialState)
+
+return <Store.Provider value={{state, dispatch}}>{props.children}</Store.Provider>
 }
