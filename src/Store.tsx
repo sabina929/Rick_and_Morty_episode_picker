@@ -1,5 +1,5 @@
 import React from 'react'
-import {IAction, IState} from './interfaces'
+import {IAction, IState} from 'interfaces'
 
 //  https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes
 

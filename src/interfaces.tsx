@@ -21,3 +21,9 @@ export interface IEpisode {
     image: {medium: string, original: string},
     summary: string
   }
+
+export interface IEpisodeProps {
+    episodes: Array<IEpisode>,
+    toggleFavAction: (episode: IEpisode) => IAction,
+    favorites: Array<IEpisode>
+  }
