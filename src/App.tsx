@@ -9,16 +9,18 @@ export default function App(props:any):JSX.Element {
  return (
    <React.Fragment>
       {/* {console.log(store)} */}
-      <header className="header">
-        <div>
-          <h1>Rick And Morty</h1>
+      <header>
+        <div className="logo">
+          <img src={require("./rm3.png")} alt="Rick and Morty"/>
           <p>Pick your favorite episode!</p>
         </div>
-        <div>
-          <Link to='/'>Home</Link>
-          <Link to='/favorites'>Favorite(s): {state.favorites.length}</Link>
+        <div className="links">
+          <Link style={{textDecoration: 'none', color: 'rgb(79, 230, 49)'}} to='/'>Home</Link>
+          <Link style={{textDecoration: 'none', color: 'rgb(79, 230, 49)'}} to='/favorites'>Favorites</Link>
           
         </div>
+
+        
       </header>
 
       {props.children}

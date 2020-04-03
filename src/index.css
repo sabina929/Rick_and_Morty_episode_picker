@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-size: 12px;
 }
@@ -5,26 +10,80 @@ body {
   margin: 0;
   font-size: 1.2rem;
   font-family: Helvetica;
+  background-color: hsl(0, 0%, 5%);
+  overflow-x: hidden;
 }
 
 .episode-layout {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-width: 100vw;
-}
-.episode-box {
-  padding: .5rem;
-  font-size: 1rem;
-  height: 200px;
-  /* border: 1px solid red; */
+  margin-top: 50px;
 }
 
-.header {
+.episode-list{
   display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border-bottom: 1px solid black;
-  padding: .5rem;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+}
+.episode-box {
+  margin: 20px 0px 20px 40px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 200px;
+  border-radius: 10px;
+  /* background-color: rgb(79, 230, 49); */
+  background-color: hsl(0, 0%, 5%);
+  box-shadow: 0 0 18px -10px rgb(79, 230, 49);
+  color: #f7f7f7;
+  /* border: 1px solid red; */
+  transition: all .3s ease;
+}
+.episode-box:hover {
+  box-shadow: 0 8px 16px -8px rgb(79, 230, 49);
+  transform: translateY(-8px) scale(1.02);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: #f7f7f7; */
+  background-color: hsl(0, 0%, 5%);
+  /* border-bottom: 1px solid black; */
+  padding: 20px;
   position: sticky;
   top: 0;
+  z-index: 99;
+  box-shadow: 0 0 18px -10px rgb(79, 230, 49);
+}
+
+header div.logo   {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header div.logo img {
+  width: 28vw;
+  height: auto;
+  filter: invert(.98) hue-rotate(200deg);
+}
+header div.logo p {
+  font-size: 2rem;
+  color: #f7f7f7;
+}
+header div.links {
+  margin-top: 20px;
+  width: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }

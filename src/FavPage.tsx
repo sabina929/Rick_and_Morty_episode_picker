@@ -18,6 +18,7 @@ export default function FavPage(): JSX.Element {
         <React.Fragment>
             <React.Suspense fallback={<div>loading...</div>}>
                 <section className="episode-layout">
+                   
                     <EpisodeList {...props}/>
                 </section>
             </React.Suspense>
