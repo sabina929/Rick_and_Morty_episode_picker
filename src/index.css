@@ -12,56 +12,23 @@ body {
   font-family: Helvetica;
   background-color: hsl(0, 0%, 5%);
   overflow-x: hidden;
-}
-
-.episode-layout {
-  display: flex;
-  /* flex-wrap: wrap; */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-width: 100vw;
-  margin-top: 50px;
-}
-
-.episode-list{
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-  align-items: center;
-}
-.episode-box {
-  margin: 20px 0px 20px 40px;
-  padding: 10px;
-  font-size: 1rem;
-  height: 200px;
-  border-radius: 10px;
-  /* background-color: rgb(79, 230, 49); */
-  background-color: hsl(0, 0%, 5%);
-  box-shadow: 0 0 18px -10px rgb(79, 230, 49);
   color: #f7f7f7;
-  /* border: 1px solid red; */
-  transition: all .3s ease;
-}
-.episode-box:hover {
-  box-shadow: 0 8px 16px -8px rgb(79, 230, 49);
-  transform: translateY(-8px) scale(1.02);
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: #f7f7f7; */
   background-color: hsl(0, 0%, 5%);
-  /* border-bottom: 1px solid black; */
   padding: 20px;
   position: sticky;
   top: 0;
   z-index: 99;
   box-shadow: 0 0 18px -10px rgb(79, 230, 49);
 }
+
 
 header div.logo   {
   display: flex;
@@ -80,10 +47,119 @@ header div.logo p {
 }
 header div.links {
   margin-top: 20px;
-  width: 10vw;
+  width: 200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: auto;
+  
 }
+header div.links .link {
+   text-decoration: none;
+   color: rgb(79, 230, 49);
+   font-size: 1.6rem;
+   transition: all .2s ease;
+   backface-visibility: hidden;
+}
+header div.links .link:hover {
+  text-shadow: 0 0px 10px rgb(79, 230, 49);
+  transform: scale(1.05);
+}
+header div.links .link:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* EPISODES */
+
+.episode-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 100vw;
+  margin-top: 50px;
+}
+
+.episode-list{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.episode-box {
+  margin: 20px 0px 20px 40px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 236px;
+  width: 270px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 5%);
+  box-shadow: 0 0 18px -10px rgb(49, 179, 230);
+  color: #f7f7f7;
+  transition: all .3s ease;
+  animation: fade .3s ease;
+}
+
+.episode-box:hover {
+  box-shadow: 0 4px 20px -8px rgb(49, 179, 230);
+  transform: translateY(-4px) scale(1.01);
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+  .episode-count {
+    color: #f7f7f7;
+    font-size: 1.6rem;
+    margin: 20px 0 20px 40px;
+  }
+
+  .episode-info{
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
+    
+  }
+  .episode-info>div{
+    font-weight: bold;
+    width: auto;
+  }
+  .episode-info>section{
+    font-size: 1.2rem;
+  width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .episode-info>section > .fas.fa-heart {
+    color: rgb(79, 230, 49);
+    font-size: 2rem;
+    transition: all .2s ease;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .episode-info>section > .far.fa-heart {
+    color: rgb(79, 230, 49);
+    font-size: 2rem;
+    transition: all .2s ease;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+

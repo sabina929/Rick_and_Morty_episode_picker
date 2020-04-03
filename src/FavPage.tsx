@@ -18,7 +18,7 @@ export default function FavPage(): JSX.Element {
         <React.Fragment>
             <React.Suspense fallback={<div>loading...</div>}>
                 <section className="episode-layout">
-                   
+                    <div className="episode-count">{props.episodes.length} {props.episodes.length >1 ? 'Episodes' : "Episode"}</div>
                     <EpisodeList {...props}/>
                 </section>
             </React.Suspense>

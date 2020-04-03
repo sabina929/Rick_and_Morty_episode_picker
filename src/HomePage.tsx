@@ -25,7 +25,7 @@ const props: IEpisodeProps ={
         <React.Fragment>
             <React.Suspense fallback={<div>loading...</div>}>
                 <section className="episode-layout">
-                    <div style={{color: "#f7f7f7"}}>{props.episodes.length}</div>
+                    <div className="episode-count">{props.episodes.length} Episodes</div>
                     <EpisodeList {...props}/>
                 </section>
             </React.Suspense>

@@ -1,10 +1,10 @@
 import React from 'react'
-import {Store} from './Store';
+// import {Store} from './Store';
 import {Link} from '@reach/router'
 
 
 export default function App(props:any):JSX.Element {
- const {state} = React.useContext(Store)
+//  const {state} = React.useContext(Store)
 
  return (
    <React.Fragment>
@@ -15,8 +15,8 @@ export default function App(props:any):JSX.Element {
           <p>Pick your favorite episode!</p>
         </div>
         <div className="links">
-          <Link style={{textDecoration: 'none', color: 'rgb(79, 230, 49)'}} to='/'>Home</Link>
-          <Link style={{textDecoration: 'none', color: 'rgb(79, 230, 49)'}} to='/favorites'>Favorites</Link>
+          <Link className="link" to='/'>Home</Link>
+          <Link className="link" to='/favorites'>Favorites</Link>
           
         </div>
 
