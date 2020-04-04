@@ -13,6 +13,7 @@ export default function EpisodeList(props: any): JSX.Element {
         {
           episodes.map((episode: IEpisode) => {
             // console.log(`${episode.image.medium}`)
+            // console.log(JSON.stringify(episode))
             return(
               
                 <section key={episode.id} className="episode-box">

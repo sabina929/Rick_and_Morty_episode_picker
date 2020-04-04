@@ -12,6 +12,7 @@ export const fetchDataAction = async (dispatch:any) => {
       payload: dataJSON._embedded.episodes
     })
  }
+
 //  console.log(state)
 
 export const toggleFavAction = (state: IState, dispatch:any, episode: IEpisode | any):IAction => {

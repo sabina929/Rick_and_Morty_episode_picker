@@ -28,9 +28,8 @@ import Episode from './Episode'
 //   document.getElementById('root')
 // );
 
-type Props = {
-	component: FC;
-} & RouteComponentProps;
+type Props = {component: FC;} & RouteComponentProps;
+
 const Route: FC<Props> = ({ component: Component, ...rest }) => (
 	<Component {...rest} />
 );

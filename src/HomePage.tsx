@@ -20,7 +20,7 @@ const props: IEpisodeProps ={
     toggleFavAction,
     favorites: state.favorites
   }
-console.log(props.episodes)
+// console.log(props.episodes)
     return (
         <React.Fragment>
             <React.Suspense fallback={<div>loading...</div>}>

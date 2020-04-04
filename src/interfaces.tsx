@@ -11,7 +11,7 @@ export interface IAction {
 }
 
 export interface IEpisode {
-  id: number,
+  id: number | any,
   url: string,
   name: string,
   season: number,
@@ -20,7 +20,7 @@ export interface IEpisode {
   airtime: string,
   airstamp: string,
   runtime: number,
-  image: {medium: string, original: string},
+  image: {medium: string | any, original: string |any},
   summary: string
 }
 
