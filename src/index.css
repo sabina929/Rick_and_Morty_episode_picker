@@ -133,8 +133,8 @@ header div.links .link:not(:first-child) {
 }
 
 .episode-box:hover {
-  box-shadow: 0 4px 20px -8px rgb(49, 179, 230);
-  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 24px -16px rgb(49, 179, 230);
+  /* transform: translateY(-1px) scale(1.001); */
 }
 
 
@@ -191,3 +191,14 @@ header div.links .link:not(:first-child) {
     cursor: pointer;
   }
 
+.episode-link {
+  text-decoration: none;
+  color: #f7f7f7;
+  transition: all .4s ease;
+}
+.episode-link:hover,
+.episode-link:focus {
+  color: rgb(197, 230, 49);
+  text-decoration: underline;
+  text-decoration-color: rgb(197, 230, 49);
+}

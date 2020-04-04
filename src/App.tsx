@@ -5,10 +5,10 @@ import {Link} from '@reach/router'
 
 export default function App(props:any):JSX.Element {
 //  const {state} = React.useContext(Store)
+//  console.log(state)
 
  return (
    <React.Fragment>
-      {/* {console.log(store)} */}
       <header>
         <div className="logo">
           <img src={require("./rm3.png")} alt="Rick and Morty"/>
