@@ -11,7 +11,7 @@ const useEpisodeFetch:any = (episodeId:number) => {
 
     const fetchData = useCallback(async () => {
         try {
-            const URL = `http://api.tvmaze.com/episodes/${episodeId}`;
+            const URL = `https://api.tvmaze.com/episodes/${episodeId}`;
             const data= await fetch(URL);
             const dataJSON = await data.json()
             // console.table(dataJSON);
