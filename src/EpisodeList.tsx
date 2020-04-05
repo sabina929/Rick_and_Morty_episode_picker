@@ -25,7 +25,7 @@ export default function EpisodeList(props: any): JSX.Element {
                     <div>{episode.name}</div>
                     </Link> 
                     <section>
-                      <div>Season: {episode.season} Number: {episode.number}</div>
+                      <div>Season: {episode.season} Episode: {episode.number}</div>
                     
                       <i className={favorites.find((fav: IEpisode) => fav.id === episode.id) ? 'fas fa-heart' : 'far fa-heart'} onClick={() => toggleFavAction(state, dispatch, episode)}></i>
                     </section>

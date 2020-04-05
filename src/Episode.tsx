@@ -14,7 +14,7 @@ const useEpisodeFetch:any = (episodeId:number) => {
             const URL = `http://api.tvmaze.com/episodes/${episodeId}`;
             const data= await fetch(URL);
             const dataJSON = await data.json()
-            console.table(dataJSON);
+            // console.table(dataJSON);
 
             // SUMMARY - TRIMMING TEXT
             const summaryText = dataJSON.summary
@@ -29,7 +29,7 @@ const useEpisodeFetch:any = (episodeId:number) => {
             // console.log(tt)
 
             // IMAGE
-            const EpisodeImg = dataJSON.image.medium
+            const episodeImg = dataJSON.image.medium
             // console.log(EpisodeImg);
 
             // NAME
@@ -53,7 +53,7 @@ const useEpisodeFetch:any = (episodeId:number) => {
                 ...dataJSON,
                 season:se,
                 number:ep,
-                image:EpisodeImg,
+                image:episodeImg,
                 name:episodeName,
                 runtime:episodeRuntime,
                 summary: textTrimedEnd
@@ -66,18 +66,15 @@ const useEpisodeFetch:any = (episodeId:number) => {
 
     useEffect(() => {
             fetchData();
-       
     }, [fetchData, episodeId]);
 
- 
-
-    console.log( state)
+    // console.log(state)
     return [state];
 }
 
 const a = useEpisodeFetch(episodeID);
 // console.log(typeof a)
-console.log(a)
+// console.log(a)
 
 const text = a[0].summary;
 // console.log(typeof text)
@@ -85,6 +82,9 @@ const text = a[0].summary;
 
 const EImg = a[0].image;
 const EName = a[0].name;
+const ERuntime = a[0].runtime;
+const ENumber = a[0].number;
+const ESeason = a[0].season;
 
 
     return (
@@ -95,6 +95,11 @@ const EName = a[0].name;
             <div className="ep-info">
                 <h2>"{EName}"</h2>
                 <p>{text}</p>
+                <div className="sm-infos">
+                    <span>Se: {ESeason}</span> 
+                    <span>Ep: {ENumber}</span>
+                    <span>Runtime: {ERuntime} min</span>
+                </div>
             </div>
             
         </section>

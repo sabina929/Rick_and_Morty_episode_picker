@@ -15,6 +15,10 @@ body {
   color: #f7f7f7;
 }
 
+::selection{
+  background-color: hsl(110, 50%, 50%);
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -205,9 +209,9 @@ header div.links .link:not(:first-child) {
 
 .episode-section{
   min-width: 90vw;
-  height: 175px;
+  height: 185px;
   margin:auto;
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -223,11 +227,11 @@ header div.links .link:not(:first-child) {
   /* border: 1px solid red; */
 }
 .episode-section .ep-img img{
-  image-rendering: pixelated;
-  width: 300px;
+  /* image-rendering: pixelated; */
+  width: 320px;
   height: auto;
   object-fit: contain;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   filter: contrast(0.9) hue-rotate(-10deg);
 }
 .episode-section .ep-info {
@@ -244,13 +248,23 @@ header div.links .link:not(:first-child) {
   color: rgb(197, 230, 49);
   font-style: italic;
   letter-spacing: 1px;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
 }
 .episode-section .ep-info p{
   margin-bottom: 20px;
   color: #f7f7f7;
   letter-spacing: .2px;
   line-height: 25px;
-  width: 75%;
-  font-size: 1.5rem;
+  width: 100%;
+  font-size: 1.4rem;
 }
+.episode-section .ep-info .sm-infos span{
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: rgb(49, 179, 230);
+}
+.episode-section .ep-info .sm-infos span:not(:last-child){
+  padding-right: 18px;
+  border-right: 1px solid rgb(49, 179, 230);
+}
+
