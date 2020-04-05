@@ -96,8 +96,8 @@ const ESeason = a[0].season;
                 <h2>"{EName}"</h2>
                 <p>{text}</p>
                 <div className="sm-infos">
-                    <span>Se: {ESeason}</span> 
-                    <span>Ep: {ENumber}</span>
+                    <span>Season: {ESeason}</span> 
+                    <span>Episode: {ENumber}</span>
                     <span>Runtime: {ERuntime} min</span>
                 </div>
             </div>

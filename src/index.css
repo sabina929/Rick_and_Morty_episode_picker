@@ -171,8 +171,9 @@ header div.links .link:not(:first-child) {
     width: auto;
   }
   .episode-info>section{
-    font-size: 1.2rem;
-  width: 100%;
+    font-size: 1.1rem;
+    width: 100%;
+    color: rgb(49, 179, 230);
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
@@ -199,6 +200,7 @@ header div.links .link:not(:first-child) {
   text-decoration: none;
   color: #f7f7f7;
   transition: all .4s ease;
+  font-weight: bold;
 }
 .episode-link:hover,
 .episode-link:focus {

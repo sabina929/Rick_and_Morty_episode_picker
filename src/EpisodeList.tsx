@@ -21,8 +21,8 @@ export default function EpisodeList(props: any): JSX.Element {
                     episode.image ? <img src={episode.image.medium} alt={`Rick and Morty ${episode.name}`}/> : <img style={{width: "250px", height: "140px"}} src={require("./no-image.png")} alt={`Rick and Morty ${episode.name}`}/>
                   }
                   <section className="episode-info">
-                  <Link className="episode-link" to={`/${episode.id}`}>
-                    <div>{episode.name}</div>
+                    <Link className="episode-link" to={`/${episode.id}`}>
+                      <div>{episode.name}</div>
                     </Link> 
                     <section>
                       <div>Season: {episode.season} Episode: {episode.number}</div>
