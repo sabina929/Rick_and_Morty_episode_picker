@@ -40,20 +40,13 @@ header div.logo   {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 14px;
 }
 
 header div.logo img {
-  width: 28vw;
+  width: 480px;
   height: auto;
   filter: invert(.98) hue-rotate(200deg);
-}
-
-header div.logo p {
-  font-size: 2rem;
-  color: #f7f7f7;
-  margin-top: 14px;
-  letter-spacing: 2px;
+  filter: invert(.985) hue-rotate(200deg) brightness(1.08);
 }
 
 header div.links {

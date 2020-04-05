@@ -12,7 +12,6 @@ export default function App(props:any):JSX.Element {
       <header>
         <div className="logo">
           <img src={require("./rm3.png")} alt="Rick and Morty"/>
-          <p>Pick your favorite episode!</p>
         </div>
         <div className="links">
           <Link className="link" to='/'>Home</Link>
