@@ -265,3 +265,19 @@ header div.links .link:not(:first-child) {
   border-right: 1px solid rgb(49, 179, 230);
 }
 
+
+.episode-section.inexistent{
+  font-size: 2rem;
+}
+.episode-section.inexistent p {
+  margin-right: 20px;
+}
+.go-home-link{
+  text-decoration: none;
+  color: rgb(197, 230, 49);
+  transition: all .2s ease;
+}
+.go-home-link:hover{
+  color: rgb(49, 179, 230);
+}
+

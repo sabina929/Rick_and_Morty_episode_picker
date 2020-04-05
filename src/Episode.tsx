@@ -1,4 +1,5 @@
 import React, {FC, useState, useEffect, useCallback} from 'react'
+import {Link} from '@reach/router'
 
 
 const Episode: FC = ({ episodeID }: any ): JSX.Element => {
@@ -86,9 +87,10 @@ const ERuntime = a[0].runtime;
 const ENumber = a[0].number;
 const ESeason = a[0].season;
 
-
+if(EImg) {
     return (
         <section className="episode-section">
+            
             <div className="ep-img">
                 <img src={EImg} alt={`Rick and Morty ${EName}`}/>
             </div>
@@ -104,6 +106,20 @@ const ESeason = a[0].season;
             
         </section>
     )
+} else {
+    return (
+        <section className="episode-section inexistent">
+            
+            <p>This episode has not yet been released...</p>
+            <span>
+                <Link className="go-home-link" to='/'>Go home!</Link>
+            </span>
+            
+            
+        </section>
+    )
+}
+    
 }
 
 export default Episode
