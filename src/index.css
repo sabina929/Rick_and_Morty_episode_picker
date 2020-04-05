@@ -17,6 +17,7 @@ body {
 
 ::selection{
   background-color: hsl(110, 50%, 50%);
+  color: #f7f7f7;
 }
 
 /* HEADER */
