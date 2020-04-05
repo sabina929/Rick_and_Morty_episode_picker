@@ -202,3 +202,55 @@ header div.links .link:not(:first-child) {
   text-decoration: underline;
   text-decoration-color: rgb(197, 230, 49);
 }
+
+.episode-section{
+  min-width: 90vw;
+  height: 175px;
+  margin:auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.episode-section .ep-img{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  /* border: 1px solid red; */
+}
+.episode-section .ep-img img{
+  image-rendering: pixelated;
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  filter: contrast(0.9) hue-rotate(-10deg);
+}
+.episode-section .ep-info {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+.episode-section .ep-info h2{
+  margin-bottom: 20px;
+  color: rgb(197, 230, 49);
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 2.1rem;
+}
+.episode-section .ep-info p{
+  margin-bottom: 20px;
+  color: #f7f7f7;
+  letter-spacing: .2px;
+  line-height: 25px;
+  width: 75%;
+  font-size: 1.5rem;
+}
