@@ -216,6 +216,7 @@ header div.links .link:not(:first-child) {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  animation: fade .3s ease;
   /* border: 1px solid red; */
 }
 .episode-section .ep-img{
